@@ -1,0 +1,22 @@
+# Environment / secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# macOS
+.DS_Store
+
+# Generated outputs
+outputs/
+
+# Downloaded papers
+inputs/papers/
+
+# IDE/editor
+.vscode/
+.idea/

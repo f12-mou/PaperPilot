@@ -33,7 +33,7 @@ verification:
 
 critic:
   provider: "openrouter"
-  model: "free"
+  model: "nvidia/nemotron-3-ultra-550b-a55b:free"
 
 revision:
   only_fix_flagged_fields: true

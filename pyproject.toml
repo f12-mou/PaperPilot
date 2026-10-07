@@ -1,0 +1,17 @@
+[project]
+name = "paperpilot"
+version = "0.1.0"
+description = "A configurable literature review pipeline for paper discovery, extraction, critique, and revision."
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "PyYAML>=6.0",
+    "PyMuPDF>=1.24",
+    "requests>=2.32",
+    "python-dotenv>=1.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
