@@ -1,0 +1,97 @@
+columns:
+
+  method:
+    description: "Name of the GRN inference method."
+
+  year:
+    description: "Publication year of the main paper."
+  
+  venue:
+    description: >
+      Publication venue of the main paper, such as the journal,
+      conference, workshop, or preprint server. If both a preprint
+      and a peer-reviewed publication exist, report the peer-reviewed
+      venue and optionally note the preprint separately in the evidence.
+  input_data:
+    description: >
+      Biological data modalities used as input, such as scRNA-seq,
+      scATAC-seq, paired multiome, bulk RNA-seq, spatial transcriptomics,
+      motif information, or prior networks.
+
+  supervision:
+    description: >
+      Whether the method is supervised, semi-supervised, or unsupervised.
+      If the classification is ambiguous, explain why.
+
+  architecture:
+    description: >
+      Main computational or machine-learning architecture used by the method,
+      such as CNN, GNN, MLP, Transformer, probabilistic model, regression,
+      matrix factorization, or another approach.
+
+  grn_output:
+    description: >
+      Type of regulatory network produced, such as binary edges,
+      weighted edges, signed edges, TF-target edges, TF-RE edges,
+      cell-type-specific networks, or cell-level networks.
+
+  signed_regulation:
+    description: >
+      Whether the method explicitly predicts activation versus inhibition.
+      Distinguish signed prediction from merely producing positive or negative
+      numerical scores.
+
+  combinatorial_tf_regulation:
+    description: >
+      Whether the method explicitly models the joint regulatory effect of
+      multiple transcription factors on the same target gene.
+      Distinguish explicit combinatorial regulation from simply using multiple
+      TFs as independent or joint input features.
+
+  ground_truth:
+    description: >
+      Source of regulatory ground truth or reference network used for training,
+      validation, or evaluation.
+
+  train_test_split:
+    description: >
+      How training and test data are separated, including whether splits are
+      based on edges, genes, cells, datasets, cell types, organisms, or other units.
+
+  negative_sampling:
+    description: >
+      How negative or non-regulatory examples are constructed, if applicable.
+
+  evaluation_metrics:
+    description: >
+      Main evaluation metrics used, such as AUROC, AUPRC, F1 score,
+      precision, recall, correlation, or other measures.
+
+  main_contribution:
+    description: >
+      The primary methodological contribution or novelty claimed by the paper.
+
+  limitations:
+    description: >
+      Important limitations stated by the authors or strongly supported by the
+      methodology. Clearly distinguish author-stated limitations from analyst inference.
+
+  code_available:
+    description: >
+      Whether implementation code is publicly available according to the paper
+      or official project resources.
+
+  evidence:
+    description: >
+      Short supporting evidence for the extracted claims, including section
+      and page number whenever possible.
+
+  confidence:
+    description: >
+      Confidence in the extracted information. Use one of:
+      high, medium, or low.
+
+  needs_manual_verification:
+    description: >
+      Whether this row contains claims that should be manually checked.
+      Use true or false.

@@ -1,0 +1,40 @@
+project_name: "GRN Literature Review"
+
+level: 1
+
+paper_source:
+  type: "algorithm_list"
+
+algorithms:
+  - CNNC
+  - DeepDRIM
+  - GNNLink
+  - LINGER
+  - Dictys
+
+schema_file: "schemas/grn.yaml"
+
+prompts:
+  paper_finder: "prompts/paper_finder.md"
+  extractor: "prompts/extractor.md"
+  critic: "prompts/critic.md"
+  reviser: "prompts/reviser.md"
+
+paths:
+  papers_dir: "inputs/papers"
+  manifest_file: "inputs/paper_manifest.json"
+  output_dir: "outputs/runs"
+
+verification:
+  require_evidence: true
+  require_page_reference: true
+  allow_unknown: true
+  track_confidence: true
+
+critic:
+  provider: "openrouter"
+  model: "free"
+
+revision:
+  only_fix_flagged_fields: true
+  keep_changelog: true
